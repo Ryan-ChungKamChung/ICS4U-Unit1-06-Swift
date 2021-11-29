@@ -62,6 +62,8 @@ func mode(intArray: [Int]) -> Set<Int> {
     return modes
 }
 
+// Collects CLI arguments, parses it into an array of strings and then into an
+// array of ints.
 let filename = CommandLine.arguments[1]
 let contents = try String(contentsOfFile: filename)
 let lines = contents.split(separator: "\n")
@@ -73,10 +75,13 @@ for line in lines where !line.isEmpty {
     intArray.append(Int(line)!)
 }
 
+// Calls mean, median and mode functions inputting the array of ints.
 let meanValue = mean(intArray: intArray)
 let medianValue = median(intArray: intArray)
 let modeValue = Array(mode(intArray: intArray)).sorted()
 
+
+// Displays the calculations to the user.
 print(intArray)
 print("\nCalculating Stats...")
 print("The mean is: \(meanValue)")
