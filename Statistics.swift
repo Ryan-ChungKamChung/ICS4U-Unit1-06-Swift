@@ -80,7 +80,6 @@ let meanValue = mean(intArray: intArray)
 let medianValue = median(intArray: intArray)
 let modeValue = Array(mode(intArray: intArray)).sorted()
 
-
 // Displays the calculations to the user.
 print(intArray)
 print("\nCalculating Stats...")
