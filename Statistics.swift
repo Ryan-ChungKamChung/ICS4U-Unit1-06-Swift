@@ -12,6 +12,7 @@
 
 import Foundation
 
+// Calculates the mean of the inputted array and returns it.
 func mean(intArray: [Int]) -> Double {
 
     var sum = 0.0
@@ -20,6 +21,8 @@ func mean(intArray: [Int]) -> Double {
     return sum / Double(intArray.count)
 }
 
+// Calculates the median of the inputted array by finding the middle, or 2
+// middle numbers and finding the average. Returns the median.
 func median(intArray: [Int]) -> Double {
 
     let sorted = intArray.sorted(by: <)
@@ -35,6 +38,7 @@ func median(intArray: [Int]) -> Double {
     return median
 }
 
+// Calculates the mode of the inputted array and returns it.
 func mode(intArray: [Int]) -> Set<Int> {
 
     var modes = Set<Int>()
